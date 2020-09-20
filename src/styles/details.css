@@ -1,0 +1,18 @@
+#product {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%
+}
+
+.details {
+    font-size: 13px;
+    text-align: center;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    
+}
