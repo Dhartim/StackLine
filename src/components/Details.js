@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faHome, faChartBar} from '@fortawesome/free-solid-svg-icons';
-
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import '../styles/details.css';
 
 
 class Details extends Component {
     render() {
         return (
-            <div className="container"> 
+            <div className="container">
                 <div className="details">
                 <img id="product" src={this.props.image} alt="Shark Ninja"></img>
                 <h3>{this.props.title}</h3>
@@ -30,17 +30,21 @@ class Details extends Component {
                     )
                 })}
                 <hr/>
-                <div className="icon">
-                <FontAwesomeIcon style={{marginRight: 10}} icon={faHome}/>    
-                   <h2>Overview</h2>
-                </div>
-                <div className="icon">
+                <Container>
+                <Navbar expand="lg" variant="light" bg="light">
+                  <Nav className = "mr-auto icon">
+                    <FontAwesomeIcon style={{marginRight: 10}} icon={faHome}/>
+                    <Nav.Link href="#overview">Overview</Nav.Link>
+                  </Nav>
+                  <Nav className="mr-auto icon">
                     <FontAwesomeIcon  style={{marginRight: 10}} icon={faChartBar}/>
-                    <h2>Sales</h2>
-                </div>
+                    <Nav.Link href="#sales">Sales</Nav.Link>
+                  </Nav>
+                </Navbar>
+                </Container>
                 </div>
         </div>
-        ) 
+        )
     }
 }
 
