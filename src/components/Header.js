@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import logo from '../assets/images/stackline-logo.png';
 import '../styles/header.css';
 
-
-
 class Header extends Component {
     render() {
         return (
